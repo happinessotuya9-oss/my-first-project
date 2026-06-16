@@ -14,3 +14,6 @@ VALUES
 
 _ _ Step 3: Write a query to look at our data 
 SELECT * FROM users WHERE country = 'Nigeria',
+_ _ Step 4: Sort all users by balance from highest to lowest
+SELECT * FROM users
+ORDER BY account_balance DESC;
