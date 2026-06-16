@@ -17,3 +17,5 @@ SELECT * FROM users WHERE country = 'Nigeria',
 _ _ Step 4: Sort all users by balance from highest to lowest
 SELECT * FROM users
 ORDER BY account_balance DESC;
+_ _ Step5: Calculate the avarage account balance of all users
+SELECT AVG(account_balance) FROM users;
