@@ -19,3 +19,21 @@ SELECT * FROM users
 ORDER BY account_balance DESC;
 _ _ Step5: Calculate the avarage account balance of all users
 SELECT AVG(account_balance) FROM users;
+_ _ Step 6: Create a second table for transaction history
+CREATE TABLE transactions (
+    transaction_id INT PRIMARY KEY,
+    user_id INT,
+    amount DECIMAL(10, 2),
+    transaction_date DATE
+);
+Insert transaction records linked backto our users via user_id
+INSERT INTO transactions (transaction_id, user_id< amount, transaction_date)
+VALUES
+(101, 1, 5000.00, '2026-06-01'),
+(102, 1, 7500.50, '2026-06-05'),
+(103, 2, 3200.00, '2026-06-10'),
+
+_ _ Step 7: Use an INNER JOIN to combine user names with their transaction amounts
+SELECT users.user_name, transactions.amount, transactions.transaction_date
+FROM users
+INNER JOIN transactions ON users.user_id = transactions.user_id; 
