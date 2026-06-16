@@ -6,7 +6,7 @@ CREATE TABLE users (
     account_balance DECIMAL(10, 2)
 ) ;
 _ _ Step 2:Insert some mock data into our table
-INSERT INTO users (users_id, user_name, contry, account_balance)
+INSERT INTO users (user_id, user_name, country, account_balance)
 VALUES
 (1, 'happiness_dev', 'Nigeria', 25000.00),
 (2, 'alex_code', 'kenya', 12000.00),
