@@ -17,6 +17,6 @@ highValueCompleted.forEach(transaction => {
     //Create a new blank <li> element in memory
     const listItem = document.createElement("li");
     //Fill it with text (e.g., "Deposite: 50000")
-    listItem.textContent = `${transaction.type.toUpperCase()}: #${transaction.amount}`;
+    listItem.textContent = `${transaction.type.toUpperCase()}: ${transaction.amount}`;
     //Push the <li> inside our <ul> container
     listElement.appendChild(listItem);
